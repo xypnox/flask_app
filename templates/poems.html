@@ -1,0 +1,10 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+    <h1>Poems</h1>
+    <ul class="list">
+        {% for poem in poems %}
+            <li> <a href="#">{{poem.id}}</a> </li>
+        {% endfor %}
+    </ul>
+{% endblock %}

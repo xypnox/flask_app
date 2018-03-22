@@ -13,5 +13,10 @@ def about():
     return render_template('about.html')
 
 
+@app.route('/poems')
+def articles():
+    return render_template('poems.html')
+
+
 if __name__ == '__main__':
     app.run(debug=True)
