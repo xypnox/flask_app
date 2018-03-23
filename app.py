@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request
 
 app = Flask(__name__)
+poem_data = []
 
 
 @app.route('/')
@@ -15,7 +16,7 @@ def about():
 
 @app.route('/poems')
 def articles():
-    return render_template('poems.html')
+    return render_template('poems.html', poems=poem_data)
 
 
 @app.route('/submit', methods=['POST', 'GET'])
